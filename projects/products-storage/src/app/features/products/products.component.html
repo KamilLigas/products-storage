@@ -1,0 +1,9 @@
+<div class="filter-container">
+  <my-org-filter-input
+    (filtersValue)="filterValue($event)"
+    (clearFilers)="clearFilteredProducts()"
+  ></my-org-filter-input>
+
+<my-org-table-list
+  [displayedColumns]="displayColumns"
+></my-org-table-list>

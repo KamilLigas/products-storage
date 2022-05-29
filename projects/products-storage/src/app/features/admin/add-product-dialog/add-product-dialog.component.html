@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>{{ title | uppercase }}</h2>
+
+<mat-dialog-content class="container">
+  <form >
+    <div [formGroup]="newProductForm">
+
+      <mat-form-field appearance="outline" class="width-max">
+        <mat-label>{{ 'name' | titlecase }}</mat-label>
+        <input matInput autocomplete="off" formControlName="name" />
+      </mat-form-field>
+
+      <div class="small-inputs">
+        <mat-form-field appearance="outline" class="custom-width pr-5">
+          <mat-label>{{ 'type' | titlecase }}</mat-label>
+          <input matInput autocomplete="off" formControlName="type" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="custom-width">
+          <mat-label>{{ 'price' | titlecase }}</mat-label>
+          <input matInput autocomplete="off" formControlName="price" />
+        </mat-form-field>
+
+      </div>
+
+      <mat-form-field appearance="outline" class="width-max">
+        <mat-label>{{ 'description' | titlecase }}</mat-label>
+        <input matInput autocomplete="off" formControlName="description" />
+      </mat-form-field>
+
+    </div>
+  </form>
+</mat-dialog-content>
+
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="undefined" class="flex-fill">
+    {{ 'Cancel' | uppercase}}
+  </button>
+  <button
+    mat-flat-button
+    [mat-dialog-close]="newProductForm.value"
+    color="primary"
+    class="flex-fill"
+    [disabled]="checkAreTouched">
+    {{ 'Approve' | uppercase}}
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,25 @@
+.container {
+  width: 700px;
+}
+
+ .pr-5 {
+   padding-right: 5px;
+ }
+
+ .width-max {
+   width: 100%;
+ }
+
+ .custom-width {
+   width: 50%;
+ }
+
+ .small-inputs {
+   display: flex;
+   //justify-items: end;
+   justify-content: space-between;
+ }
+
+ .flex-fill {
+   -ms-flex:1 1 auto!important;flex:1 1 auto!important
+ }

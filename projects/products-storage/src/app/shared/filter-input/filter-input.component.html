@@ -1,0 +1,13 @@
+<mat-form-field appearance="outline" class="filter-input">
+  <mat-label>Filter by name</mat-label>
+  <input matInput autocomplete="off" [formControl]="formControl" />
+
+  <button
+    matSuffix
+    mat-icon-button
+    color="warn"
+    (click)="removeFilters()"
+  >
+    <mat-icon>remove_circle</mat-icon>
+  </button>
+</mat-form-field>

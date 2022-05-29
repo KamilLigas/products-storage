@@ -1,0 +1,18 @@
+<h2 *ngIf="data.title" mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content class="mat-typography overflow-hidden">
+  <h4>{{ data.message }}</h4>
+  <mat-checkbox
+    [(ngModel)]="deleteForced"
+    color="warn"
+    class="text-danger mt-2"
+  >Yes, I confirm</mat-checkbox
+  >
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false" class="flex-fill">
+    {{ 'Cancel' | uppercase}}
+  </button>
+  <button [disabled]="!deleteForced" mat-flat-button [mat-dialog-close]="true" color="primary" class="flex-fill">
+    {{ 'Approve' | uppercase}}
+  </button>
+</mat-dialog-actions>

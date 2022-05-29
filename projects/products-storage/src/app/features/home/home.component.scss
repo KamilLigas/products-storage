@@ -1,0 +1,14 @@
+.buttons-menu {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .button-custom {
+    margin-right: 5px;
+    height: 150px;
+    width: 150px;
+  }
+}
+
