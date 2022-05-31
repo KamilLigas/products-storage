@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>{{ title | uppercase }}</h2>
 
 <mat-dialog-content class="container">
-  <form >
+  <form>
     <div [formGroup]="newProductForm">
 
       <mat-form-field appearance="outline" class="width-max">
@@ -11,8 +11,10 @@
 
       <div class="small-inputs">
         <mat-form-field appearance="outline" class="custom-width pr-5">
-          <mat-label>{{ 'type' | titlecase }}</mat-label>
-          <input matInput autocomplete="off" formControlName="type" />
+          <mat-label>{{ 'Select type' | titlecase }}</mat-label>
+          <mat-select formControlName="type">
+            <mat-option *ngFor="let type of types" [value]="type">{{ type | titlecase }}</mat-option>
+          </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="custom-width">
@@ -25,6 +27,11 @@
       <mat-form-field appearance="outline" class="width-max">
         <mat-label>{{ 'description' | titlecase }}</mat-label>
         <input matInput autocomplete="off" formControlName="description" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="width-max">
+        <mat-label>{{ 'Image' | titlecase }}</mat-label>
+        <input matInput autocomplete="off" formControlName="image" />
       </mat-form-field>
 
     </div>

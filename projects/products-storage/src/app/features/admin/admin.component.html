@@ -2,7 +2,7 @@
   <div class="demo-button-container">
     <button mat-raised-button (click)="addData()" class="demo-button">
       <mat-icon>add</mat-icon>
-      Add data
+      {{ 'Add product' | uppercase }}
     </button>
     <button
       mat-raised-button
@@ -10,7 +10,7 @@
       (click)="editData()"
       class="demo-button">
       <mat-icon>edit</mat-icon>
-      Edit product
+      {{ 'Edit product' | uppercase }}
     </button>
     <button
       mat-raised-button
@@ -18,7 +18,7 @@
       (click)="removeData()"
       class="demo-button">
       <mat-icon>delete</mat-icon>
-      Remove data
+      {{ 'Remove data' | uppercase }}
     </button>
   </div>
   <div class="filter-container">

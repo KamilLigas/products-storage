@@ -12,6 +12,7 @@ import { IProduct } from "../../../core/dao/products/products.dao";
 export class AddProductDialogComponent implements OnInit {
   newProductForm:  FormGroup;
   title: string = 'Add new product';
+  types: string[] = ['Białko', 'Kreatyna', 'Inne']
 
   get checkAreTouched() {
     return (!this.newProductForm.controls['name'].value
@@ -29,6 +30,7 @@ export class AddProductDialogComponent implements OnInit {
       description: ['', Validators.required],
       type: ['', Validators.required],
       price: ['', Validators.required],
+      image: ['', Validators.required],
     });
   }
 
@@ -47,7 +49,8 @@ export class AddProductDialogComponent implements OnInit {
         name: this.data.name,
         type: this.data.type,
         price: this.data.price,
-        description: this.data.description
+        description: this.data.description,
+        image: this.data.image
       }
     )
   }
